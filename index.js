@@ -18,10 +18,10 @@ function increaseRankBy(n) {
   var size = rlist.length;
 
   for (var i = 0; i < size; i++) {
-    for (var j = 0; j < rlist[i].children; j++) {
+    for (var j = 0; j < rlist[i].children.length; j++) {
 
       let inV = rlist[i].children[j].innerHTML;
-      rlist[i].children[j].innerHTML = n;
+      rlist[i].children[j].innerHTML = parseInt(inV) + n;
 
     }
   }
