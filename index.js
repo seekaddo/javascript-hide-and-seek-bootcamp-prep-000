@@ -1,0 +1,31 @@
+
+function getFirstSelector(selector) {
+  return document.querySelector(selector);
+}
+
+
+function nestedTarget() {
+  return document.querySelector("#nested .target")
+}
+
+function deepestChild() {
+  return document.querySelector("#grand-node div div div div");
+}
+
+function increaseRankBy(n) {
+  var rlist = document.querySelectorAll(".ranked-list");
+  var elem1 = rlist[0];
+  var elem2 = rlist[1];
+
+  var size = rlist.length;
+
+  for (var i = 0; i < size; i++) {
+    for (var j = 0; j < rlist[i].children; j++) {
+
+      let inV = rlist[i].children[j].innerHTML;
+      inV = parseInt(inV + n);
+      
+    }
+  }
+  
+}
